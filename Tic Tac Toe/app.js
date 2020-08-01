@@ -71,19 +71,7 @@ function compTurn(x) {
 
 
         if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
-            if(mainMatrix[2][1]===0 && tmp === 0) {
-                mainMatrix[2][1]='X';
-                showX(8);
-                console.log('here');
-                prev=8;
-                tmp=1;
-                console.log(tmp);
-            } 
-        }
-
-
-        if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
-            if(mainMatrix[2][1]===0 && tmp === 0) {
+            if(mainMatrix[2][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                 mainMatrix[2][1]='X';
                 showX(8);
                 console.log('here');
