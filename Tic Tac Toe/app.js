@@ -27,6 +27,8 @@ function divPressed(x) {
         var iEl = document.querySelector('#i-' + x);
         i = Math.trunc((x-1)/3);
         j = x-(3*i)-1;
+
+
         if (mainMatrix[i][j]===0) {
             divEl.classList.add('pressed');
             iEl.style.opacity = '1';
@@ -69,6 +71,40 @@ function compTurn(x) {
         var tmp = 0;
         console.log('tmp  = '+tmp);
 
+        if(prev===8 || mainMatrix[1][1]==='X') {
+            if( mainMatrix[1][1] === mainMatrix[2][1]) {
+                if(mainMatrix[0][1]===0 && tmp === 0) {
+                    mainMatrix[0][1]='X';
+                    showX(2);
+                    console.log('here');
+                    prev=2;
+                    tmp=1;
+                    console.log(tmp);
+                } 
+            }
+        }
+
+        if (x===1 || x===3 || x===7 || x===9) {
+            if(mainMatrix[1][1]===0 && tmp === 0) {
+                mainMatrix[1][1]='X';
+                showX(5);
+                console.log('here');
+                prev=5;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if(mainMatrix[1][1]==='O' && mainMatrix[1][2]==='O') {
+            if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
+                mainMatrix[0][1]='X';
+                showX(2);
+                console.log('here');
+                prev=2;
+                tmp=1;
+                console.log(tmp);
+            } 
+        }
 
         if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
             if(mainMatrix[2][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
@@ -93,7 +129,7 @@ function compTurn(x) {
                 } 
            }
            if( mainMatrix[0][2] === mainMatrix[0][0]) {
-                if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
+                if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
                     console.log('here');
@@ -207,7 +243,7 @@ function compTurn(x) {
                 } 
            }
            if( mainMatrix[0][0] === mainMatrix[0][2]) {
-                if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
+                if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
                     console.log('here');
@@ -619,6 +655,37 @@ function compTurn(x) {
             }
         }
 
+        if (mainMatrix[0][0]==='O' && mainMatrix[2][2]==='O' && mainMatrix[1][1]==='X') {
+            if(mainMatrix[2][1]===0 && tmp === 0) {
+                mainMatrix[2][1]='X';
+                showX(8);
+                console.log('here');
+                prev=8;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[2][0]==='O' && mainMatrix[0][2]==='O' && mainMatrix[1][1]==='X') {
+            if(mainMatrix[2][1]===0 && tmp === 0) {
+                mainMatrix[2][1]='X';
+                showX(8);
+                console.log('here');
+                prev=8;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
+            mainMatrix[0][1]='X';
+            showX(2);
+            console.log('here');
+            prev=2;
+            tmp=1;
+            console.log(tmp);
+        } 
+
         if ((mainMatrix[2][1]==='O' || mainMatrix[0][1]==='O') && (mainMatrix[1][0]||mainMatrix[1][2])) {
             if(mainMatrix[1][1]===0 && tmp === 0) {
                 mainMatrix[1][1]='X';
@@ -683,7 +750,7 @@ function compTurn(x) {
 
 
         if (mainMatrix[0][0]==='O' && mainMatrix[2][2] === 'O' && tmp === 0) {
-            if(mainMatrix[1][0]===0 && tmp === 0) {
+            if(mainMatrix[1][0]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                 mainMatrix[1][0]='X';
                 showX(4);
                 console.log('here');
