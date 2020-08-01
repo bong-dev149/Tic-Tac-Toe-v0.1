@@ -68,6 +68,18 @@ function compTurn(x) {
         curPlayer = 1;
         var tmp = 0;
         console.log('tmp  = '+tmp);
+
+        if (mainMatrix[2][1]==='X' && mainMatrix[1][1]==='X' && tmp ===0) {
+            if(mainMatrix[0][1]===0 && tmp === 0) {
+                mainMatrix[0][1]='X';
+                showX(2);
+                console.log('here');
+                prev=2;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
         if (mainMatrix[0][1]==='O' && (mainMatrix[2][0]==='O' || mainMatrix[2][2]==='O')) {
             if(mainMatrix[2][1]===0 && tmp === 0) {
                 mainMatrix[2][1]='X';
