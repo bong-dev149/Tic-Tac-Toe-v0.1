@@ -568,7 +568,7 @@ function compTurn(x) {
                 }2
            }
            if( mainMatrix[2][0] === mainMatrix[2][2]) {
-                if(mainMatrix[2][1]===0 && tmp === 0) {
+                if(mainMatrix[2][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                     mainMatrix[2][1]='X';
                     showX(8);
                     console.log('here');
@@ -749,7 +749,7 @@ function compTurn(x) {
 
         if (count===1) {
             // console.log('5*');
-            if(mainMatrix[1][1]===0 && tmp===0) {
+            if(mainMatrix[1][1]===0 && tmp===0 && mainMatrix[1][1]===0) {
                 mainMatrix[1][1] = 'X';
                 showX(5);
                 console.log('here');
@@ -760,7 +760,7 @@ function compTurn(x) {
             // console.log('tmp = '+ tmp + ' 0');
         }
 
-        if (mainMatrix[0][0]===0 && tmp===0) {
+        if (mainMatrix[0][0]===0 && tmp===0 && mainMatrix[1][1]===0) {
             mainMatrix[0][0] = 'X';
             showX(1);
             console.log('here');
@@ -770,7 +770,7 @@ function compTurn(x) {
             // console.log('1* tmp= '+tmp);
         }
 
-        if (mainMatrix[0][2]===0 && tmp===0) {
+        if (mainMatrix[0][2]===0 && tmp===0 && mainMatrix[1][1]===0) {
             mainMatrix[0][2] = 'X';
             showX(3);
             console.log('here');
@@ -779,7 +779,7 @@ function compTurn(x) {
             console.log(tmp);
             // console.log('3* tmp= '+tmp);
         }
-        if (mainMatrix[2][0]===0 && tmp===0) {
+        if (mainMatrix[2][0]===0 && tmp===0 && mainMatrix[1][1]===0) {
             mainMatrix[2][0] = 'X';
             showX(7);
             console.log('here');
@@ -788,7 +788,7 @@ function compTurn(x) {
             console.log(tmp);
             // console.log('7* tmp= '+tmp);
         }
-        if (mainMatrix[2][2]===0 && tmp===0) {
+        if (mainMatrix[2][2]===0 && tmp===0 && mainMatrix[1][1]===0) {
             mainMatrix[2][2] = 'X';
             showX(9);
             console.log('here');
