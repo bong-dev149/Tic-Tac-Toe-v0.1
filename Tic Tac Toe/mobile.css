@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+:root {
+    --main-color: #091921;
+    --green: #39ff14;
+    --red: #ff073a;
+    --blue: #0900ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#game-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 250%;
+    margin-top: 20%;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 30px var(--blue);
+}
+
+#game-name::before {
+    content: '';
+    height: 70%;
+    width: 60%;
+    background-color: rgba(9, 0, 255,0.3);
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    filter: blur(25px);
+    z-index: -1;
+    
+}
+
+#btn-holder {
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-game-btn {
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+    padding: 9% 11%;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-size: 100%;
+    text-align: center;
+    color: aliceblue;
+    background-color: var(--main-color);
+    border: none;
+    letter-spacing: 3px;
+    box-shadow: -3px -3px 8px rgba(162, 151, 255, 0.15),
+                3px 3px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 5px var(--blue);
+}
+
+#new-game-btn:focus {
+    outline: none;
+}
+
+#new-game-btn:hover {
+    box-shadow: 
+                -3px -3px 8px rgba(162, 151, 255, 0.15),
+                inset -3px -3px 5px rgba(162, 151, 255, 0.1),
+                3px 3px 8px rgba(0, 0, 0, 0.5),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.99);
+    cursor: pointer;
+}
+
+#game-container {
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 5%;
+}
+
+.gc-child {
+    border-radius: 5px;
+    box-shadow: -3px -3px 8px rgba(162, 151, 255, 0.15),
+                3px 3px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+
+}
+
+
+.gc-child i {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-times {
+    text-shadow: -1px -1px 8px var(--red),
+    1px 1px 8px rgba(0, 0, 0, 0.8);
+    padding: 0 0.5rem;
+}
+
+.fa-circle {
+    text-shadow: -1px -1px 8px var(--green),
+    1px 1px 8px rgba(0, 0, 0, 0.8);
+}
+
+.pressed {
+    box-shadow: 
+                -3px -3px 8px rgba(162, 151, 255, 0.15),
+                inset -3px -3px 5px rgba(162, 151, 255, 0.1),
+                3px 3px 8px rgba(0, 0, 0, 0.5),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.99);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 0px 10px var(--blue);
+    font-size: 90%;
+}
+
+
+/* Media Queries  */
+
+@media screen and (max-width: 375px) {
+    #btn-holder {
+        margin-top: 10%;
+    }
+    #game-name {
+        margin-top: 40%;
+    }
+    /* #game-container {
+        width: 40vh;
+        height: 40vh;
+    } */
+}
+
+@media screen and (max-width: 280px) {
+    #game-container {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    #game-name {
+        margin-top: 50%;
+    }
+} 
+
+@media screen and (max-width: 411px) {
+    #btn-holder {
+        margin-top: 20%;
+    }
+    #game-name {
+        margin-top: 45%;
+    }
+    #game-container {
+        width: 40vh;
+        height: 40vh;
+    }
+}
