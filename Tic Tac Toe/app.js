@@ -69,29 +69,7 @@ function compTurn(x) {
         var tmp = 0;
         console.log('tmp  = '+tmp);
 
-       if ((mainMatrix[2][1]==='O' || mainMatrix[0][1]==='O') && (mainMatrix[1][0]||mainMatrix[1][2])) {
-            if(mainMatrix[1][1]===0 && tmp === 0) {
-                mainMatrix[1][1]='X';
-                showX(5);
-                console.log('here');
-                prev=5;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (mainMatrix[2][1]==='X' && mainMatrix[1][1]==='X' && tmp ===0) {
-            if(mainMatrix[0][1]===0 && tmp === 0) {
-                mainMatrix[0][1]='X';
-                showX(2);
-                console.log('here');
-                prev=2;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (mainMatrix[0][1]==='O' && (mainMatrix[2][0]==='O' || mainMatrix[2][2]==='O')) {
+        if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
             if(mainMatrix[2][1]===0 && tmp === 0) {
                 mainMatrix[2][1]='X';
                 showX(8);
@@ -99,85 +77,9 @@ function compTurn(x) {
                 prev=8;
                 tmp=1;
                 console.log(tmp);
-            }
-        }
-
-        if (mainMatrix[2][1]==='O' && (mainMatrix[0][0]==='O' || mainMatrix[0][2]==='O')) {
-            if(mainMatrix[0][1]===0 && tmp === 0) {
-                mainMatrix[0][1]='X';
-                showX(2);
-                console.log('here');
-                prev=2;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-
-        if (mainMatrix[0][0]==='O' && mainMatrix[2][2] === 'O' && tmp === 0) {
-            if(mainMatrix[1][0]===0 && tmp === 0) {
-                mainMatrix[1][0]='X';
-                showX(4);
-                console.log('here');
-                prev=4;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (mainMatrix[0][2]==='O' && mainMatrix[2][0] === 'O' && tmp === 0 && count===3) {
-            if(mainMatrix[1][2]===0 && tmp === 0) {
-                mainMatrix[1][2]='X';
-                showX(6);
-                console.log('here');
-                prev=6;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-        if (prev===5 && x===1) {
-            if(mainMatrix[1][0]===0 && tmp === 0) {
-                mainMatrix[1][0]='X';
-                showX(4);
-                console.log('here');
-                prev=4;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (prev===4 && mainMatrix[1][1]==='X') {
-            if(mainMatrix[1][2]===0 && tmp === 0) {
-                mainMatrix[1][2]='X';
-                showX(6);
-                console.log('here');
-                prev=6;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (prev===6 && mainMatrix[1][1]==='X') {
-            if(mainMatrix[1][0]===0 && tmp === 0) {
-                mainMatrix[1][0]='X';
-                showX(4);
-                console.log('here');
-                prev=6;
-                tmp=1;
-                console.log(tmp);
-            }
-        }
-
-        if (mainMatrix[0][0] === 'O' && mainMatrix[2][1]==='O' && tmp===0) {
-            if(mainMatrix[2][0]===0 && tmp === 0) {
-                mainMatrix[2][0]='X';
-                showX(7);
-                console.log('here');
-                prev=7;
-                tmp=1;
-                console.log(tmp);
             } 
-        } 
+        }
+       
         if (x===1 || prev===1) {
            if( mainMatrix[0][1] === mainMatrix[0][0]) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
@@ -715,6 +617,116 @@ function compTurn(x) {
                 } 
             }
         }
+
+        if ((mainMatrix[2][1]==='O' || mainMatrix[0][1]==='O') && (mainMatrix[1][0]||mainMatrix[1][2])) {
+            if(mainMatrix[1][1]===0 && tmp === 0) {
+                mainMatrix[1][1]='X';
+                showX(5);
+                console.log('here');
+                prev=5;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[2][1]==='X' && mainMatrix[1][1]==='X' && tmp ===0) {
+            if(mainMatrix[0][1]===0 && tmp === 0) {
+                mainMatrix[0][1]='X';
+                showX(2);
+                console.log('here');
+                prev=2;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[0][1]==='O' && (mainMatrix[2][0]==='O' || mainMatrix[2][2]==='O')) {
+            if(mainMatrix[2][1]===0 && tmp === 0) {
+                mainMatrix[2][1]='X';
+                showX(8);
+                console.log('here');
+                prev=8;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[2][1]==='O' && (mainMatrix[0][0]==='O' || mainMatrix[0][2]==='O')) {
+            if(mainMatrix[0][1]===0 && tmp === 0) {
+                mainMatrix[0][1]='X';
+                showX(2);
+                console.log('here');
+                prev=2;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+
+        if (mainMatrix[0][0]==='O' && mainMatrix[2][2] === 'O' && tmp === 0) {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                console.log('here');
+                prev=4;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[0][2]==='O' && mainMatrix[2][0] === 'O' && tmp === 0 && count===3) {
+            if(mainMatrix[1][2]===0 && tmp === 0) {
+                mainMatrix[1][2]='X';
+                showX(6);
+                console.log('here');
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+        if (prev===5 && x===1) {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                console.log('here');
+                prev=4;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (prev===4 && mainMatrix[1][1]==='X') {
+            if(mainMatrix[1][2]===0 && tmp === 0) {
+                mainMatrix[1][2]='X';
+                showX(6);
+                console.log('here');
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (prev===6 && mainMatrix[1][1]==='X') {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                console.log('here');
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[0][0] === 'O' && mainMatrix[2][1]==='O' && tmp===0) {
+            if(mainMatrix[2][0]===0 && tmp === 0) {
+                mainMatrix[2][0]='X';
+                showX(7);
+                console.log('here');
+                prev=7;
+                tmp=1;
+                console.log(tmp);
+            } 
+        } 
 
         if (count===1) {
             // console.log('5*');
