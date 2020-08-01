@@ -68,21 +68,45 @@ function compTurn(x) {
         curPlayer = 1;
         var tmp = 0;
         console.log('tmp  = '+tmp);
+        if (mainMatrix[0][1]==='O' && (mainMatrix[2][0]==='O' || mainMatrix[2][2]==='O')) {
+            if(mainMatrix[2][1]===0 && tmp === 0) {
+                mainMatrix[2][1]='X';
+                showX(8);
+                console.log('here');
+                prev=8;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[2][1]==='O' && (mainMatrix[0][0]==='O' || mainMatrix[0][2]==='O')) {
+            if(mainMatrix[0][1]===0 && tmp === 0) {
+                mainMatrix[0][1]='X';
+                showX(2);
+                console.log('here');
+                prev=2;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
 
         if (mainMatrix[0][0]==='O' && mainMatrix[2][2] === 'O' && tmp === 0) {
             if(mainMatrix[1][0]===0 && tmp === 0) {
                 mainMatrix[1][0]='X';
                 showX(4);
+                console.log('here');
                 prev=4;
                 tmp=1;
                 console.log(tmp);
             }
         }
 
-        if (mainMatrix[0][2]==='O' && mainMatrix[2][0] === 'O' && tmp === 0) {
+        if (mainMatrix[0][2]==='O' && mainMatrix[2][0] === 'O' && tmp === 0 && count===3) {
             if(mainMatrix[1][2]===0 && tmp === 0) {
                 mainMatrix[1][2]='X';
                 showX(6);
+                console.log('here');
                 prev=6;
                 tmp=1;
                 console.log(tmp);
@@ -92,6 +116,7 @@ function compTurn(x) {
             if(mainMatrix[1][0]===0 && tmp === 0) {
                 mainMatrix[1][0]='X';
                 showX(4);
+                console.log('here');
                 prev=4;
                 tmp=1;
                 console.log(tmp);
@@ -102,6 +127,7 @@ function compTurn(x) {
             if(mainMatrix[1][2]===0 && tmp === 0) {
                 mainMatrix[1][2]='X';
                 showX(6);
+                console.log('here');
                 prev=6;
                 tmp=1;
                 console.log(tmp);
@@ -112,6 +138,7 @@ function compTurn(x) {
             if(mainMatrix[1][0]===0 && tmp === 0) {
                 mainMatrix[1][0]='X';
                 showX(4);
+                console.log('here');
                 prev=6;
                 tmp=1;
                 console.log(tmp);
@@ -122,6 +149,7 @@ function compTurn(x) {
             if(mainMatrix[2][0]===0 && tmp === 0) {
                 mainMatrix[2][0]='X';
                 showX(7);
+                console.log('here');
                 prev=7;
                 tmp=1;
                 console.log(tmp);
@@ -132,6 +160,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -141,6 +170,7 @@ function compTurn(x) {
                 if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
+                    console.log('here');
                     prev=2;
                     tmp=1;
                     console.log(tmp);
@@ -150,6 +180,7 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
@@ -159,6 +190,7 @@ function compTurn(x) {
                 if(mainMatrix[1][0]===0 && tmp === 0) {
                     mainMatrix[1][0]='X';
                     showX(4);
+                    console.log('here');
                     prev=4;
                     tmp=1;
                     console.log(tmp);
@@ -168,6 +200,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -177,6 +210,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -189,6 +223,7 @@ function compTurn(x) {
             if(mainMatrix[0][2]===0 && tmp===0 && count===1) {
                 mainMatrix[0][2]='X';
                 showX(3);
+                console.log('here');
                 prev=3;
                 tmp=1;
             }
@@ -196,6 +231,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -205,6 +241,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -214,6 +251,7 @@ function compTurn(x) {
                 if(mainMatrix[2][1]===0 && tmp === 0) {
                     mainMatrix[2][1]='X';
                     showX(8);
+                    console.log('here');
                     prev=8;
                     tmp=1;
                     console.log(tmp);
@@ -223,6 +261,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -235,6 +274,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -244,6 +284,7 @@ function compTurn(x) {
                 if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
+                    console.log('here');
                     prev=2;
                     tmp=1;
                     console.log(tmp);
@@ -253,6 +294,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -262,6 +304,7 @@ function compTurn(x) {
                 if(mainMatrix[1][2]===0 && tmp === 0) {
                     mainMatrix[1][2]='X';
                     showX(6);
+                    console.log('here');
                     prev=6;
                     tmp=1;
                     console.log(tmp);
@@ -271,15 +314,18 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
                 } 
             }
             if( mainMatrix[2][0] === mainMatrix[0][2]) {
+                
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -291,6 +337,7 @@ function compTurn(x) {
             if(mainMatrix[0][0]===0 && tmp===0 && count===1) {
                 mainMatrix[0][0] = 'X';
                 showX(1);
+                console.log('here');
                 prev=1;
                 tmp=1;
             }
@@ -298,6 +345,7 @@ function compTurn(x) {
                 if(mainMatrix[1][2]===0 && tmp === 0) {
                     mainMatrix[1][2]='X';
                     showX(6);
+                    console.log('here');
                     prev=6;
                     tmp=1;
                     console.log(tmp);
@@ -307,6 +355,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -316,6 +365,7 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
@@ -325,6 +375,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -337,6 +388,7 @@ function compTurn(x) {
                 if(mainMatrix[1][2]===0 && tmp === 0) {
                     mainMatrix[1][2]='X';
                     showX(6);
+                    console.log('here');
                     prev=6;
                     tmp=1;
                     console.log(tmp);
@@ -346,6 +398,7 @@ function compTurn(x) {
                 if(mainMatrix[1][0]===0 && tmp === 0) {
                     mainMatrix[1][0]='X';
                     showX(4);
+                    console.log('here');
                     prev=4;
                     tmp=1;
                     console.log(tmp);
@@ -355,6 +408,7 @@ function compTurn(x) {
                 if(mainMatrix[2][1]===0 && tmp === 0) {
                     mainMatrix[2][1]='X';
                     showX(8);
+                    console.log('here');
                     prev=8;
                     tmp=1;
                     console.log(tmp);
@@ -364,6 +418,7 @@ function compTurn(x) {
                 if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
+                    console.log('here');
                     prev=2;
                     tmp=1;
                     console.log(tmp);
@@ -373,6 +428,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -382,6 +438,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -391,6 +448,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -400,6 +458,7 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
@@ -411,6 +470,7 @@ function compTurn(x) {
             if (mainMatrix[0][2]===0 && tmp===0 && count===1) {
                 mainMatrix[0][2]='X';
                 showX(3);
+                console.log('here');
                 prev = 9;
                 tmp = 1;
             }
@@ -418,6 +478,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -427,6 +488,7 @@ function compTurn(x) {
                 if(mainMatrix[1][0]===0 && tmp === 0) {
                     mainMatrix[1][0]='X';
                     showX(4);
+                    console.log('here');
                     prev=4;
                     tmp=1;
                     console.log(tmp);
@@ -436,6 +498,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -445,6 +508,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -457,6 +521,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -466,6 +531,7 @@ function compTurn(x) {
                 if(mainMatrix[2][1]===0 && tmp === 0) {
                     mainMatrix[2][1]='X';
                     showX(8);
+                    console.log('here');
                     prev=8;
                     tmp=1;
                     console.log(tmp);
@@ -475,6 +541,7 @@ function compTurn(x) {
                 if(mainMatrix[1][0]===0 && tmp === 0) {
                     mainMatrix[1][0]='X';
                     showX(4);
+                    console.log('here');
                     prev=4;
                     tmp=1;
                     console.log(tmp);
@@ -484,6 +551,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -493,6 +561,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -502,6 +571,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -513,6 +583,7 @@ function compTurn(x) {
             if (mainMatrix[2][2]===0 && tmp===0 && count===1) {
                 mainMatrix[2][2]='X';
                 showX(9);
+                console.log('here');
                 prev = 9;
                 tmp = 1;
             }
@@ -521,6 +592,7 @@ function compTurn(x) {
                 if(mainMatrix[2][2]===0 && tmp === 0) {
                     mainMatrix[2][2]='X';
                     showX(9);
+                    console.log('here');
                     prev=9;
                     tmp=1;
                     console.log(tmp);
@@ -530,6 +602,7 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
@@ -539,6 +612,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -548,6 +622,7 @@ function compTurn(x) {
                 if(mainMatrix[0][1]===0 && tmp === 0) {
                     mainMatrix[0][1]='X';
                     showX(2);
+                    console.log('here');
                     prev=2;
                     tmp=1;
                     console.log(tmp);
@@ -560,6 +635,7 @@ function compTurn(x) {
                 if(mainMatrix[2][0]===0 && tmp === 0) {
                     mainMatrix[2][0]='X';
                     showX(7);
+                    console.log('here');
                     prev=7;
                     tmp=1;
                     console.log(tmp);
@@ -569,6 +645,7 @@ function compTurn(x) {
                 if(mainMatrix[2][1]===0 && tmp === 0) {
                     mainMatrix[2][1]='X';
                     showX(8);
+                    console.log('here');
                     prev=8;
                     tmp=1;
                     console.log(tmp);
@@ -578,6 +655,7 @@ function compTurn(x) {
                 if(mainMatrix[1][2]===0 && tmp === 0) {
                     mainMatrix[1][2]='X';
                     showX(6);
+                    console.log('here');
                     prev=6;
                     tmp=1;
                     console.log(tmp);
@@ -587,6 +665,7 @@ function compTurn(x) {
                 if(mainMatrix[0][2]===0 && tmp === 0) {
                     mainMatrix[0][2]='X';
                     showX(3);
+                    console.log('here');
                     prev=3;
                     tmp=1;
                     console.log(tmp);
@@ -596,6 +675,7 @@ function compTurn(x) {
                 if(mainMatrix[0][0]===0 && tmp === 0) {
                     mainMatrix[0][0]='X';
                     showX(1);
+                    console.log('here');
                     prev=1;
                     tmp=1;
                     console.log(tmp);
@@ -605,6 +685,7 @@ function compTurn(x) {
                 if(mainMatrix[1][1]===0 && tmp === 0) {
                     mainMatrix[1][1]='X';
                     showX(5);
+                    console.log('here');
                     prev=5;
                     tmp=1;
                     console.log(tmp);
@@ -617,6 +698,7 @@ function compTurn(x) {
             if(mainMatrix[1][1]===0 && tmp===0) {
                 mainMatrix[1][1] = 'X';
                 showX(5);
+                console.log('here');
                 prev=5;
                 tmp=1;
                 console.log(tmp);
@@ -627,6 +709,7 @@ function compTurn(x) {
         if (mainMatrix[0][0]===0 && tmp===0) {
             mainMatrix[0][0] = 'X';
             showX(1);
+            console.log('here');
             prev=1;
             tmp=1;
             console.log(tmp);
@@ -636,6 +719,7 @@ function compTurn(x) {
         if (mainMatrix[0][2]===0 && tmp===0) {
             mainMatrix[0][2] = 'X';
             showX(3);
+            console.log('here');
             prev=3;
             tmp=1;
             console.log(tmp);
@@ -644,6 +728,7 @@ function compTurn(x) {
         if (mainMatrix[2][0]===0 && tmp===0) {
             mainMatrix[2][0] = 'X';
             showX(7);
+            console.log('here');
             prev=7;
             tmp=1;
             console.log(tmp);
@@ -652,6 +737,7 @@ function compTurn(x) {
         if (mainMatrix[2][2]===0 && tmp===0) {
             mainMatrix[2][2] = 'X';
             showX(9);
+            console.log('here');
             prev=9;
             tmp=1;
             console.log(tmp);
@@ -666,6 +752,7 @@ function compTurn(x) {
                 if (mainMatrix[p][q]===0) {
                     mainMatrix[p][q] = 'X';
                     showX(temp);
+                    console.log('here');
                     // console.log('inside if ' + temp);
                     break;
                 } 
