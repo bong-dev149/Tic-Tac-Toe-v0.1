@@ -62,9 +62,62 @@ function showX(x)
 
 function compTurn(x) {
     if (!isWin) {
+        var p,q;
+        p = Math.trunc((prev-1)/3);
+        q = prev-(3*p)-1; 
         curPlayer = 1;
         var tmp = 0;
         console.log('tmp  = '+tmp);
+
+        if (mainMatrix[0][0]==='O' && mainMatrix[2][2] === 'O' && tmp === 0) {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                prev=4;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (mainMatrix[0][2]==='O' && mainMatrix[2][0] === 'O' && tmp === 0) {
+            if(mainMatrix[1][2]===0 && tmp === 0) {
+                mainMatrix[1][2]='X';
+                showX(6);
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+        if (prev===5 && x===1) {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                prev=4;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (prev===4 && mainMatrix[1][1]==='X') {
+            if(mainMatrix[1][2]===0 && tmp === 0) {
+                mainMatrix[1][2]='X';
+                showX(6);
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
+        if (prev===6 && mainMatrix[1][1]==='X') {
+            if(mainMatrix[1][0]===0 && tmp === 0) {
+                mainMatrix[1][0]='X';
+                showX(4);
+                prev=6;
+                tmp=1;
+                console.log(tmp);
+            }
+        }
+
         if (mainMatrix[0][0] === 'O' && mainMatrix[2][1]==='O' && tmp===0) {
             if(mainMatrix[2][0]===0 && tmp === 0) {
                 mainMatrix[2][0]='X';
