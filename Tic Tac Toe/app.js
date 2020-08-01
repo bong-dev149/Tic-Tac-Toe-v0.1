@@ -69,6 +69,19 @@ function compTurn(x) {
         var tmp = 0;
         console.log('tmp  = '+tmp);
 
+
+        if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
+            if(mainMatrix[2][1]===0 && tmp === 0) {
+                mainMatrix[2][1]='X';
+                showX(8);
+                console.log('here');
+                prev=8;
+                tmp=1;
+                console.log(tmp);
+            } 
+        }
+
+
         if (mainMatrix[2][0]===mainMatrix[1][2] && mainMatrix[1][2]==='O' && tmp===0) {
             if(mainMatrix[2][1]===0 && tmp === 0) {
                 mainMatrix[2][1]='X';
@@ -641,24 +654,42 @@ function compTurn(x) {
         }
 
         if (mainMatrix[0][1]==='O' && (mainMatrix[2][0]==='O' || mainMatrix[2][2]==='O')) {
-            if(mainMatrix[2][1]===0 && tmp === 0) {
+            if(mainMatrix[2][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                 mainMatrix[2][1]='X';
                 showX(8);
                 console.log('here');
                 prev=8;
                 tmp=1;
                 console.log(tmp);
+            } else {
+                if(mainMatrix[1][2]===0 && tmp === 0) {
+                    mainMatrix[1][2]='X';
+                    showX(6);
+                    console.log('here');
+                    prev=6;
+                    tmp=1;
+                    console.log(tmp);
+                }
             }
         }
 
         if (mainMatrix[2][1]==='O' && (mainMatrix[0][0]==='O' || mainMatrix[0][2]==='O')) {
-            if(mainMatrix[0][1]===0 && tmp === 0) {
+            if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                 mainMatrix[0][1]='X';
                 showX(2);
                 console.log('here');
                 prev=2;
                 tmp=1;
                 console.log(tmp);
+            } else {
+                if(mainMatrix[1][0]===0 && tmp === 0) {
+                    mainMatrix[1][0]='X';
+                    showX(4);
+                    console.log('here');
+                    prev=4;
+                    tmp=1;
+                    console.log(tmp);
+                }    
             }
         }
 
