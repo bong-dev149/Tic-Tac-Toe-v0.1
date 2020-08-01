@@ -207,7 +207,7 @@ function compTurn(x) {
                 } 
            }
            if( mainMatrix[0][0] === mainMatrix[0][2]) {
-                if(mainMatrix[0][1]===0 && tmp === 0) {
+                if(mainMatrix[0][1]===0 && tmp === 0 && mainMatrix[1][1]===0) {
                     mainMatrix[0][1]='X';
                     showX(2);
                     console.log('here');
