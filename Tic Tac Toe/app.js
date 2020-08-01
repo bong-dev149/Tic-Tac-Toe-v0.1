@@ -69,7 +69,7 @@ function compTurn(x) {
         var tmp = 0;
         console.log('tmp  = '+tmp);
 
-        if (mainMatrix[2][1]==='O' && (mainMatrix[1][0]||mainMatrix[1][2])) {
+        if ((mainMatrix[2][1]==='O' && (mainMatrix[1][0]||mainMatrix[1][2]))||(mainMatrix[0][1]==='O' && (mainMatrix[1][0]==='O' || mainMatrix[1][2] === 'O'))) {
             if(mainMatrix[1][1]===0 && tmp === 0) {
                 mainMatrix[1][1]='X';
                 showX(5);
